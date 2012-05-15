@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="uiButtonBuyNewTicketVoucher" xml:space="preserve">
+    <value>Køb SMS-klippekort</value>
+  </data>
+  <data name="uiButtonCheckTicketVoucherAmount" xml:space="preserve">
+    <value>Tjek SMS-klippekort saldo</value>
+  </data>
+  <data name="uiButtonCreateSMS" xml:space="preserve">
+    <value>Dan billet SMS</value>
+  </data>
+  <data name="uiButtonCreateTicketVoucherSMS" xml:space="preserve">
+    <value>Dan klip SMS</value>
+  </data>
+  <data name="uiExtraAdditionalZone" xml:space="preserve">
+    <value>Tilkøb</value>
+  </data>
+  <data name="uiExtraPlusBicycle" xml:space="preserve">
+    <value>+ Cykel</value>
+  </data>
+  <data name="uiHeaderExtra" xml:space="preserve">
+    <value>Ekstra</value>
+  </data>
+  <data name="uiHeaderMain" xml:space="preserve">
+    <value>SMS Billet</value>
+  </data>
+  <data name="uiHeaderNumberOfZones" xml:space="preserve">
+    <value>Antal zoner</value>
+  </data>
+  <data name="uiHeaderStartingPoint" xml:space="preserve">
+    <value>Start (zone/station/stoppestedsnr)</value>
+  </data>
+  <data name="uiHeaderTicketType" xml:space="preserve">
+    <value>Billettype</value>
+  </data>
+  <data name="uiInfoTicketAddBicycleText" xml:space="preserve">
+    <value>Hvis du bestiller en voksen- eller barnebillet, kan du tilvælge cykel til billetten.</value>
+  </data>
+  <data name="uiInfoTicketAdditionalZoneText" xml:space="preserve">
+    <value>Hvis du vil tilkøbe en enkelt zone som tillægsbillet til en eksisterende billet, skal du markere Tilkøb, så kan du vælge 1 zone. Hvis du ikke vælger tilkøb er 2 zoner minimumkøb.</value>
+  </data>
+  <data name="uiInfoTicketCreateSMSHeader" xml:space="preserve">
+    <value>Dan SMS</value>
+  </data>
+  <data name="uiInfoTicketCreateSMSText" xml:space="preserve">
+    <value>Klik på denne knap for at få dannet den SMS, du skal sende for at købe en SMS-billet. Du skal angive en start-zone/stoppested/station før du kan klikke på denne knap.</value>
+  </data>
+  <data name="uiInfoTicketNumberOfZonesHeader" xml:space="preserve">
+    <value>Antal zoner</value>
+  </data>
+  <data name="uiInfoTicketNumberOfZonesText" xml:space="preserve">
+    <value>Vælg det antal zoner som din rejse strækker sig over.</value>
+  </data>
+  <data name="uiInfoTicketStartHeader" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="uiInfoTicketStartText" xml:space="preserve">
+    <value>Angiv det zonenummer du starter rejsen fra eller indtast den station / stoppested du står ved. Ved stoppested skal du angive S før stoppestednummeret. F.eks. S253</value>
+  </data>
+  <data name="uiInfoTickettypeBicycleHeader" xml:space="preserve">
+    <value>Billettype (Cykel)</value>
+  </data>
+  <data name="uiInfoTickettypeBicycleText" xml:space="preserve">
+    <value>Når du vælger billettype Cykel, køber du kun en billet til din Cykel. Én cykelbillet gælder for op til 7 zoner. Det er gratis at medtage cykler i S-tog</value>
+  </data>
+  <data name="uiInfoTickettypeHeader" xml:space="preserve">
+    <value>Billettype (Voksen/barn)</value>
+  </data>
+  <data name="uiInfoTickettypeText" xml:space="preserve">
+    <value>Vælg om billetten er til en voksen (over 14) eller et barn (under 14).</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonBuyVoucherHeader" xml:space="preserve">
+    <value>Køb SMS-klippekort</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonBuyVoucherText" xml:space="preserve">
+    <value>Ved afsendelse af denne SMS, vil du købe et 20-zoners SMS-klippekort.</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCheckVoucherHeader" xml:space="preserve">
+    <value>Tjek SMS-klippekort saldo</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCheckVoucherText" xml:space="preserve">
+    <value>Ved afsendelse af denne SMS, vil du få en SMS retur som fortæller dig hvor mange uanvendte klip du har tilbage på dit SMS-klippekort.</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCreateSMSHeader" xml:space="preserve">
+    <value>Dan Klip SMS</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCreateSMSText" xml:space="preserve">
+    <value>Klik på denne knap for at få dannet den SMS, du skal sende for at anvende klip på dit SMS-klippekort. Du skal angive en start-zone/stoppested/station før du kan klikke på denne knap.</value>
+  </data>
+  <data name="uiInfoTicketVoucherTickettypeHeader" xml:space="preserve">
+    <value>Billettype (Voksen/barn)</value>
+  </data>
+  <data name="uiInfoTicketVoucherTickettypeText" xml:space="preserve">
+    <value>Vælg om billetten er til en voksen (over 14) eller et barn (under 14).</value>
+  </data>
+  <data name="uiTabHeaderInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="uiTabHeaderTicket" xml:space="preserve">
+    <value>Billet</value>
+  </data>
+  <data name="uiTabHeaderTicketVoucher" xml:space="preserve">
+    <value>Klippekort</value>
+  </data>
+  <data name="uiTickettypeAdult" xml:space="preserve">
+    <value>Voksen</value>
+  </data>
+  <data name="uiTickettypeBicycle" xml:space="preserve">
+    <value>Cykel</value>
+  </data>
+  <data name="uiTickettypeChild" xml:space="preserve">
+    <value>Barn</value>
+  </data>
+</root>

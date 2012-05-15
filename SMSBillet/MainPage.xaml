@@ -1,0 +1,162 @@
+﻿<phone:PhoneApplicationPage xmlns:my="clr-namespace:SMSBillet"  
+    x:Class="SMSBillet.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="false" 
+    Margin="0,0,0,0" IsTabStop="False"    
+    >
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+            <TextBlock Name="tbUIHeader" Text="{Binding Path=LocalizedResources.uiHeaderMain, Source={StaticResource LocalizedStrings}}" FontSize="30" Margin="22,15,0,0" />
+            <controls:Pivot x:Name="pivotControl" Margin="0,0,0,0" FontSize="20">
+                <!--Pivot item one-->
+                <controls:PivotItem FontSize="20">
+                    <controls:PivotItem.Header>
+                        <ContentControl>
+                            <StackPanel>
+                                <TextBlock Name="tbTabHeaderTicket" Text="{Binding Path=LocalizedResources.uiTabHeaderTicket, Source={StaticResource LocalizedStrings}}" FontSize="60"/>
+                            </StackPanel>
+                        </ContentControl>
+                    </controls:PivotItem.Header>
+                    <StackPanel HorizontalAlignment="Left" Margin="10,-10,0,0" >
+                        <TextBlock Height="30" Name="tbStartingPoint" Text="{Binding Path=LocalizedResources.uiHeaderStartingPoint, Source={StaticResource LocalizedStrings}}" />
+                        <TextBox Height="71" InputScope="Number" Name="txtStartingPoint" Text="" Width="350" TextChanged="txtStartingPoint_TextChanged" KeyDown="txtStartingPoint_KeyDown" GotFocus="txtStartingPoint_GotFocus" HorizontalContentAlignment="Left" HorizontalAlignment="Left">
+                        </TextBox>
+                        <TextBlock  Height="30" Name="tbNumberOfZones" Text="{Binding Path=LocalizedResources.uiHeaderNumberOfZones, Source={StaticResource LocalizedStrings}}" Margin="0,5,0,0" />
+                        <StackPanel Height="85" Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Height="75" Width="60" x:Name="tbNumberOfZonesSelected" Text="2" FontSize="60" Margin="10,-7,0,0" TextAlignment="Center" VerticalAlignment="top" />
+                            <Button Content="-" Height="75" Name="btnMinus" Width="170" FontSize="25" VerticalAlignment="top" VerticalContentAlignment="Center" Click="btnMinus_Click" />
+                            <Button Content="+" Height="75" Name="btnPlus" Width="170" FontSize="25" BorderThickness="3" ClickMode="Press" VerticalContentAlignment="center" VerticalAlignment="top" Click="btnPlus_Click" />
+                        </StackPanel>
+                        <StackPanel   Orientation="Horizontal" Margin="0,5,0,0">
+                            <StackPanel Width="200">
+                                <TextBlock  Name="tbType" Text="{Binding Path=LocalizedResources.uiHeaderTicketType, Source={StaticResource LocalizedStrings}}" />
+                                <RadioButton Content="{Binding Path=LocalizedResources.uiTickettypeAdult, Source={StaticResource LocalizedStrings}}"  HorizontalAlignment="Left" Name="rbAdult" VerticalAlignment="Top" IsChecked="True" />
+                                <RadioButton Content="{Binding Path=LocalizedResources.uiTickettypeChild, Source={StaticResource LocalizedStrings}}"  HorizontalAlignment="Left" Name="rbChild" VerticalAlignment="Top" FontSize="22.667" />
+                                <RadioButton Content="{Binding Path=LocalizedResources.uiTickettypeBicycle, Source={StaticResource LocalizedStrings}}"   HorizontalAlignment="Left" Name="rbBike" VerticalAlignment="Top" Checked="rbBike_Checked" Unchecked="rbBike_Unchecked" />
+                            </StackPanel>
+                            <StackPanel Name="spExtra">
+                                <TextBlock Height="30" Name="tbExtra" Text="{Binding Path=LocalizedResources.uiHeaderExtra, Source={StaticResource LocalizedStrings}}" />
+                                <CheckBox Content="{Binding Path=LocalizedResources.uiExtraPlusBicycle, Source={StaticResource LocalizedStrings}}" Height="70" HorizontalAlignment="Left" Name="chkExtraBike" VerticalAlignment="Top" />
+                                <CheckBox Content="{Binding Path=LocalizedResources.uiExtraAdditionalZone, Source={StaticResource LocalizedStrings}}" Height="70" HorizontalAlignment="Left" Name="chkExtraExtra" VerticalAlignment="Top" Checked="chkExtraExtra_Checked" Unchecked="chkExtraExtra_Unchecked" />
+                            </StackPanel>
+                        </StackPanel>
+                        <Button Content="{Binding Path=LocalizedResources.uiButtonCreateSMS, Source={StaticResource LocalizedStrings}}" Height="104" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Name="btnCreateMessage" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Click="btnCreateMessage_Click" IsEnabled="False" Padding="0" BorderThickness="3" Width="406" FontSize="32" />
+                    </StackPanel>
+                </controls:PivotItem>
+                <!--Pivot item two-->
+                <controls:PivotItem FontSize="20">
+                    <controls:PivotItem.Header>
+                        <ContentControl>
+                            <StackPanel>
+                                <TextBlock Name="tbTabHeaderTicketVoucher" Text="{Binding Path=LocalizedResources.uiTabHeaderTicketVoucher, Source={StaticResource LocalizedStrings}}" FontSize="60"/>
+                            </StackPanel>
+                        </ContentControl>
+                    </controls:PivotItem.Header>
+                    <StackPanel HorizontalAlignment="Left" Margin="10,0,0,0" >
+                        <Button Content="{Binding Path=LocalizedResources.uiButtonBuyNewTicketVoucher, Source={StaticResource LocalizedStrings}}"  Height="70" Name="btnKlippekort" FontSize="25" BorderThickness="3" ClickMode="Press" VerticalContentAlignment="center" VerticalAlignment="top" Click="btnKlippekort_Click" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Padding="10,0,10,5" />
+                        <Button Content="{Binding Path=LocalizedResources.uiButtonCheckTicketVoucherAmount, Source={StaticResource LocalizedStrings}}" Height="70" Name="btnKlippekortSaldo" FontSize="25" BorderThickness="3" ClickMode="Press" VerticalContentAlignment="center" VerticalAlignment="top" Click="btnKlippekortSaldo_Click" Padding="10,0,10,5" />
+                        <StackPanel>
+                            <StackPanel HorizontalAlignment="Stretch" Margin="0,10,0,0" Height="474" Width="424">
+                                <TextBlock  Name="tbStartingPointKlippeKort" Text="{Binding Path=LocalizedResources.uiHeaderStartingPoint, Source={StaticResource LocalizedStrings}}" />
+                                <TextBox Height="71" Width="350" InputScope="Number" Name="txtStartingPointKlippeKort" Text="" HorizontalContentAlignment="Left" HorizontalAlignment="Left" TextChanged="txtStartingPointKlippeKort_TextChanged" KeyUp="txtStartingPointKlippeKort_KeyUp">
+                                </TextBox>
+                                <TextBlock Name="tbNumberOfZonesKlippeKort" Text="{Binding Path=LocalizedResources.uiHeaderNumberOfZones, Source={StaticResource LocalizedStrings}}" Margin="0,10,0,0" />
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <TextBlock Height="75" x:Name="tbNumberOfZonesSelectedKlippeKort" Text="2" FontSize="60" Margin="10,-7,0,0" TextAlignment="Center" VerticalAlignment="top" Width="44" />
+                                    <Button Content="-" Height="75" Name="btnMinusKlippeKort"  FontSize="25" VerticalAlignment="top" VerticalContentAlignment="Center" Click="btnMinusKlippeKort_Click" Width="185" />
+                                    <Button Content="+" Height="75" Name="btnPlusKlippeKort"  FontSize="25" BorderThickness="3" ClickMode="Press" VerticalContentAlignment="center" VerticalAlignment="top" Click="btnPlusKlippeKort_Click" Width="185" />
+                                </StackPanel>
+                                <StackPanel Margin="0,10,0,0">
+                                    <TextBlock  Name="tbTypeKlippeKort" Text="{Binding Path=LocalizedResources.uiHeaderTicketType, Source={StaticResource LocalizedStrings}}" />
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+
+                                        <RadioButton Content="{Binding Path=LocalizedResources.uiTickettypeAdult, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" Name="rbAdultKlippeKort" VerticalAlignment="Top" IsChecked="True" HorizontalContentAlignment="Stretch" />
+                                        <RadioButton Content="{Binding Path=LocalizedResources.uiTickettypeChild, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" Name="rbChildKlippeKort" VerticalAlignment="Top" FontSize="22.667" />
+
+                                    </StackPanel>
+                                </StackPanel>
+                                <Button Content="{Binding Path=LocalizedResources.uiButtonCreateTicketVoucherSMS, Source={StaticResource LocalizedStrings}}" Height="104" HorizontalAlignment="Stretch" Name="btnCreateMessageKlippeKort" VerticalAlignment="Stretch" IsEnabled="False" Padding="0" BorderThickness="3" Click="btnCreateMessageKlippeKort_Click" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="423" FontSize="32" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </controls:PivotItem>
+
+                <controls:PivotItem FontSize="20">
+                    <controls:PivotItem.Header>
+                        <ContentControl>
+                            <StackPanel>
+                                <TextBlock Name="tbTabHeaderInfo" Text="{Binding Path=LocalizedResources.uiTabHeaderInfo, Source={StaticResource LocalizedStrings}}" FontSize="60"/>
+                            </StackPanel>
+                        </ContentControl>
+                    </controls:PivotItem.Header>
+                    <ScrollViewer Height="624" Width="454">
+                        <StackPanel Margin="0,-10,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <TextBlock Name="uiInfoTicketHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiTabHeaderTicket, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="35" />
+
+                            <TextBlock Name="uiInfoTicketStartHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketStartHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketStartText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketStartText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketNumberOfZonesHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketNumberOfZonesHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketNumberOfZonesText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketNumberOfZonesText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTickettypeHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTickettypeHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTickettypeText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTickettypeText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTickettypeBicycleHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTickettypeBicycleHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTickettypeBicycleText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTickettypeBicycleText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketAddBicycleHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiExtraPlusBicycle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketAddBicycleText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketAddBicycleText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketAdditionalZoneHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiExtraAdditionalZone, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketAdditionalZoneText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketAdditionalZoneText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketCreateSMSHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketCreateSMSHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketCreateSMSText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketCreateSMSText, Source={StaticResource LocalizedStrings}}" />
+
+
+                            <TextBlock Name="uiInfoTicketVoucherHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiTabHeaderTicketVoucher, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="35" />
+
+                            <TextBlock Name="uiInfoTicketVoucherButtonBuyVoucherHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherButtonBuyVoucherHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketVoucherButtonBuyVoucherText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherButtonBuyVoucherText, Source={StaticResource LocalizedStrings}}" />
+
+
+                            <TextBlock Name="uiInfoTicketVoucherButtonCheckVoucherHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherButtonCheckVoucherHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketVoucherButtonCheckVoucherText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherButtonCheckVoucherText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketVoucherButtonStartZoneHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketStartHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketVoucherButtonStartZoneText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketStartText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketVoucherNumberOfZonesHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketNumberOfZonesHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketVoucherNumberOfZonesText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketNumberOfZonesText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketVoucherTickettypeHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherTickettypeHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketVoucherTickettypeText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherTickettypeText, Source={StaticResource LocalizedStrings}}" />
+
+                            <TextBlock Name="uiInfoTicketVoucherButtonCreateSMSHeader" TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherButtonCreateSMSHeader, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" />
+                            <TextBlock Name="uiInfoTicketVoucherButtonCreateSMSText" TextWrapping="Wrap" Margin="10,0,0,10" Text="{Binding Path=LocalizedResources.uiInfoTicketVoucherButtonCreateSMSText, Source={StaticResource LocalizedStrings}}" />
+
+                            
+                        </StackPanel>
+                    </ScrollViewer>
+                </controls:PivotItem>
+
+            </controls:Pivot>
+        </StackPanel>
+    </Grid>
+</phone:PhoneApplicationPage>
+

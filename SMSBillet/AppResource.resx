@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="uiButtonBuyNewTicketVoucher" xml:space="preserve">
+    <value>Buy Ticket Voucher</value>
+  </data>
+  <data name="uiButtonCheckTicketVoucherAmount" xml:space="preserve">
+    <value>Check Ticket Voucher Remains</value>
+  </data>
+  <data name="uiButtonCreateSMS" xml:space="preserve">
+    <value>Create Ticket SMS</value>
+  </data>
+  <data name="uiButtonCreateTicketVoucherSMS" xml:space="preserve">
+    <value>Create Voucher Usage SMS</value>
+  </data>
+  <data name="uiExtraAdditionalZone" xml:space="preserve">
+    <value>Extra Zones</value>
+  </data>
+  <data name="uiExtraPlusBicycle" xml:space="preserve">
+    <value>+ Bicycle</value>
+  </data>
+  <data name="uiHeaderExtra" xml:space="preserve">
+    <value>Extra</value>
+  </data>
+  <data name="uiHeaderMain" xml:space="preserve">
+    <value>SMS Ticket (Copenhagen)</value>
+  </data>
+  <data name="uiHeaderNumberOfZones" xml:space="preserve">
+    <value>Number of Zones</value>
+  </data>
+  <data name="uiHeaderStartingPoint" xml:space="preserve">
+    <value>Start (zone/station)</value>
+  </data>
+  <data name="uiHeaderTicketType" xml:space="preserve">
+    <value>Ticket type</value>
+  </data>
+  <data name="uiInfoTicketAddBicycleText" xml:space="preserve">
+    <value>If you order an adult or child ticket, you can opt for bike ticket.</value>
+  </data>
+  <data name="uiInfoTicketAdditionalZoneText" xml:space="preserve">
+    <value>If you want to buy a single zone ticket in addition to an existing ticket, select Extra, then select 1 zone. If you do not select Extra is 2 zones minimum purchase.</value>
+  </data>
+  <data name="uiInfoTicketCreateSMSHeader" xml:space="preserve">
+    <value>Create SMS</value>
+  </data>
+  <data name="uiInfoTicketCreateSMSText" xml:space="preserve">
+    <value>Click this button to generate the SMS, you need to send to buy an SMS ticket. You must enter a start-zone/stop/station before you can click on this button.</value>
+  </data>
+  <data name="uiInfoTicketNumberOfZonesHeader" xml:space="preserve">
+    <value>Number of Zones</value>
+  </data>
+  <data name="uiInfoTicketNumberOfZonesText" xml:space="preserve">
+    <value>Select the number of zones your trip spans.</value>
+  </data>
+  <data name="uiInfoTicketStartHeader" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="uiInfoTicketStartText" xml:space="preserve">
+    <value>Enter the zone number you start your journey from or enter the station / stop you are at. If using bus stop, enter S before the stop number. For example S253</value>
+  </data>
+  <data name="uiInfoTickettypeBicycleHeader" xml:space="preserve">
+    <value>Ticket type (Bicycle)</value>
+  </data>
+  <data name="uiInfoTickettypeBicycleText" xml:space="preserve">
+    <value>When you select the ticket type bike, you buy only one ticket for your bike. One bicycle ticket is valid for up to 7 zones. It's free to bring bikes in the S-trains</value>
+  </data>
+  <data name="uiInfoTickettypeHeader" xml:space="preserve">
+    <value>Ticket type (Adult/child)</value>
+  </data>
+  <data name="uiInfoTickettypeText" xml:space="preserve">
+    <value>Choose whether the ticket is for an adult (over 14) or child (under 14).</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonBuyVoucherHeader" xml:space="preserve">
+    <value>Buy Ticket Voucher</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonBuyVoucherText" xml:space="preserve">
+    <value>By sending this SMS, you will buy a 20-zone SMS voucher.</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCheckVoucherHeader" xml:space="preserve">
+    <value>Check Ticket Voucher Remains</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCheckVoucherText" xml:space="preserve">
+    <value>By sending this SMS, you will get a text back telling you how many unused clips you have left on your SMS voucher.</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCreateSMSHeader" xml:space="preserve">
+    <value>Create Voucher Use SMS</value>
+  </data>
+  <data name="uiInfoTicketVoucherButtonCreateSMSText" xml:space="preserve">
+    <value>Click this button to generate the SMS you must send to use clip on your SMS voucher. You must enter a start-zone/stop/station before you can click on this button.</value>
+  </data>
+  <data name="uiInfoTicketVoucherTickettypeHeader" xml:space="preserve">
+    <value>Ticket type (Adult/child)</value>
+  </data>
+  <data name="uiInfoTicketVoucherTickettypeText" xml:space="preserve">
+    <value>Choose whether the ticket is for an adult (over 14) or child (under 14)</value>
+  </data>
+  <data name="uiTabHeaderInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="uiTabHeaderTicket" xml:space="preserve">
+    <value>Ticket</value>
+  </data>
+  <data name="uiTabHeaderTicketVoucher" xml:space="preserve">
+    <value>Ticket Voucher</value>
+  </data>
+  <data name="uiTickettypeAdult" xml:space="preserve">
+    <value>Adult</value>
+  </data>
+  <data name="uiTickettypeBicycle" xml:space="preserve">
+    <value>Bicycle</value>
+  </data>
+  <data name="uiTickettypeChild" xml:space="preserve">
+    <value>Child</value>
+  </data>
+</root>
